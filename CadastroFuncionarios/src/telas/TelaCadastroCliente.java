@@ -72,7 +72,6 @@ public class TelaCadastroCliente extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 setVisible(false);
                 dispose();
-                System.exit(0);
             }
         });
 
@@ -103,6 +102,7 @@ public class TelaCadastroCliente extends JFrame {
 
         //exibe
         this.setVisible(true);
+        this.setLocationRelativeTo(null);
 
         //define que quando fechar a janela o programa acaba
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
