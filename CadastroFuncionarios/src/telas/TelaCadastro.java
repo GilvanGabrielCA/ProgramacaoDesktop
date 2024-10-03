@@ -7,11 +7,12 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class TelaCadastro extends JFrame {
+public class TelaCadastro extends JDialog {
 
     public TelaCadastro(){
         this.initialize();
-        this.setExtendedState(NORMAL);
+        this.setModal(true);
+        this.setAlwaysOnTop(true);
     }
 
     //atributos
@@ -68,7 +69,6 @@ public class TelaCadastro extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 setVisible(false);
                 dispose();
-                System.exit(0);
             }
         });
 
@@ -97,8 +97,9 @@ public class TelaCadastro extends JFrame {
 
         //exibe
         this.setVisible(true);
+        this.setLocationRelativeTo(null);
 
         //define que quando fechar a janela o programa acaba
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
     }
 }
